@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento Generado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #0044cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        h2 {
+            margin: 10px 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .content {
+            padding: 20px;
+        }
+        .link-section {
+            margin: 20px 0;
+        }
+        .link-section h3 {
+            font-size: 1.2em;
+            color: #555;
+        }
+        .link-section a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #0066cc;
+        }
+        .link-section a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #0044cc;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Documento Programación</h1>
+        <h2>Subtítulo: {{ nombre_subtitulo }}</h2>
+        <p>Fecha: {{ fecha }}</p>
+    </header>
+
+    <div class="content">
+        <p>Aquí va el contenido fijo del documento, que no cambiará.</p>
+
+        <div class="link-section">
+            <h3>Enlaces Relacionados:</h3>
+            {% for link in links %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <footer>
+        <p>Documento generado automáticamente</p>
+    </footer>
+</body>
+</html>
